@@ -1,0 +1,12 @@
+[Error 1]: requirements error
+[Error 2]: missing tool
+[Error 3]: airmon-ng error
+[Error 4]: ifconfig error
+[Error 5]: nmcli error
+[Error 6]: airodump-ng error
+[Error 7]: aireplay-ng error
+[Error 8]: mdk4 error
+[Error 9]: command not found
+[Error 10]: socket error
+[Error 11]: connection refused
+[Error 404]: unexpected error
