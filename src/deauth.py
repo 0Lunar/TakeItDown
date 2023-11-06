@@ -49,9 +49,10 @@ def deauth(iface, bssid):
 
 def deauthdv(iface, bssid, mac):
     try:
-        tool = 0
         print_slow.slow_type("\n\nEnter the tool:\n\n 1. aireplay-ng\n\n 2. mdk4\n")
-        tool = int(input("\n ==> "))
+        tool = 0
+        while(tool < 1 or tool > 2):
+            tool = int(input("\n ==> "))
         clean()
         banner.bannerDeauth()
         print("\n\n")

