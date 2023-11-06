@@ -9,4 +9,5 @@
 [Error 9]: command not found
 [Error 10]: socket error
 [Error 11]: connection refused
+[Error 12]: permission denied
 [Error 404]: unexpected error
