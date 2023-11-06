@@ -3,16 +3,15 @@ from datetime import datetime
 from src import print_slow
 from colorama import Fore
 
-INFO = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [INFO] "
-ERROR = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [ERROR] "
-SUCCESS = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [SUCCESS] "
-
 def logFile():
     currentDir = os.getcwd()
     logFile = currentDir + "/logs.log"
     return logFile
 
 def log(mode, logText):
+    INFO = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [INFO] "
+    ERROR = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [ERROR] "
+    SUCCESS = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [SUCCESS] "
     logfile = open(logFile(), "a+")
     logsType = [INFO, ERROR, SUCCESS]
     if mode < 0 or mode > 2:
@@ -22,6 +21,9 @@ def log(mode, logText):
     logfile.close()
 
 def startLog():
+    INFO = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [INFO] "
+    ERROR = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [ERROR] "
+    SUCCESS = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [SUCCESS] "
     try:
         #make log file
         if(os.path.isfile(logFile()) == False):
