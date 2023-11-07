@@ -6,8 +6,9 @@
 [Error 6]: airodump-ng error
 [Error 7]: aireplay-ng error
 [Error 8]: mdk4 error
-[Error 9]: command not found
+[Error 9]: command/option not found
 [Error 10]: socket error
 [Error 11]: connection refused
 [Error 12]: permission denied
+[Error 13]: arp-scan error
 [Error 404]: unexpected error

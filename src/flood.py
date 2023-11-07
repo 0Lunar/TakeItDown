@@ -8,13 +8,14 @@ def clean():
 def flood(ip, port):
     try:
         method = 0
-        print_slow.slow_type("\n\n  Enter the attack method: \n\n\n 1. TCP\n\n 2. UDP\n\n")
+        print_slow.slow_type(Fore.CYAN + "\n\n  Enter the attack method: \n\n\n 1. TCP\n\n 2. UDP\n\n")
         while(method < 1 or method > 2):
-            method = int(input("\n ==> "))
+            method = int(input(Fore.GREEN + "\n ==> " + Fore.YELLOW))
         if method == 1:
             logs.log(0, "method: TCP")
         else:
             logs.log(0, "method: UDP")
+        print(Fore.RESET)
         clean()
         banner.flood()
         try:

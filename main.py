@@ -2,7 +2,7 @@
 
 import os, sys
 from colorama import Fore, init
-from src import check, banner, mode, print_slow, deauth, ap, flood, logs
+from src import check, banner, mode, print_slow, deauth, ap, flood, logs, arpScan
 
 def clean():
     os.system("clear")
@@ -35,13 +35,14 @@ def main():
             else: #managed mode
                 mode.managed(iface)
         elif choise == 3: #wifi list
+            print("\n")
             if os.system("nmcli dev wifi") != 0:
                 logs.log(1, "[Error 5]; nmcli error")
                 print(Fore.RED , "\n[Error 5]" , Fore.RESET)
                 sys.exit()
             else:
                 logs.log(2, "nmcli executed")
-                input("\nPress Enter to continue...")
+                input(Fore.GREEN + "\n[Press enter to continue]" + Fore.RESET)
         elif choise == 4 or choise == 5: #deauth
             clean()
             banner.banner()
@@ -73,7 +74,7 @@ def main():
             logs.log(0, l)
             ap.ap(iface)
         elif choise == 7:
-            print_slow.slow_type("\n\nEnter the ip: ")
+            print_slow.slow_type(Fore.GREEN + "\n\nEnter the ip: ")
             ip = input()
             l = "ip: " + ip
             logs.log(0, l)
@@ -81,6 +82,7 @@ def main():
             port = int(input())
             l = "port: " + str(port)
             logs.log(0, l)
+            print(Fore.RESET)
             clean()
             banner.banner()
             flood.flood(ip, port)
@@ -90,6 +92,17 @@ def main():
             print("\n\n" + Fore.GREEN + "[Press enter to continue]" + Fore.RESET)
             input()
         elif choise == 9:
+            print(Fore.CYAN + "\nEnter the type of scan:" + Fore.GREEN + "\n\n 1. normal\n 2. verbose\n 3. qiet")
+            arpOption = int(input("\n ==> " + Fore.YELLOW))
+            l = "option: " + str(arpOption)
+            logs.log(0, l)
+            print(Fore.CYAN + "\n")
+            show_ifaces()
+            iface = input(Fore.GREEN + "\nEnter the iface: ")
+            l = "iface: " + iface
+            logs.log(0, l)
+            arpScan.arpScan(iface, arpOption)
+        elif choise == 10:
             clean()
             banner.banner()
             logs.log(1, "exiting")
