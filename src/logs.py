@@ -9,9 +9,9 @@ def logFile():
     return logFile
 
 def log(mode, logText):
-    INFO = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [INFO] "
-    ERROR = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [ERROR] "
-    SUCCESS = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [SUCCESS] "
+    INFO = datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " [INFO] "
+    ERROR = datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " [ERROR] "
+    SUCCESS = datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " [SUCCESS] "
     logfile = open(logFile(), "a+")
     logsType = [INFO, ERROR, SUCCESS]
     if mode < 0 or mode > 2:
@@ -21,18 +21,18 @@ def log(mode, logText):
     logfile.close()
 
 def startLog():
-    INFO = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [INFO] "
-    ERROR = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [ERROR] "
-    SUCCESS = datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " [SUCCESS] "
+    INFO = datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " [INFO] "
+    ERROR = datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " [ERROR] "
+    SUCCESS = datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " [SUCCESS] "
     try:
         #make log file
         if(os.path.isfile(logFile()) == False):
             logfile = open(logFile(), "w")
             print_slow.slow_type(Fore.BLUE + "\n\nLogFile" + Fore.GREEN + " [CREATED]")
-            logfile.write("----------" + datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " Log File created----------\n")
+            logfile.write("----------" + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " Log File created----------\n")
         else:
             logfile = open(logFile(), "a+")
-            logfile.writelines("\n\n----------" + datetime.now().strftime("%d:%m:%Y %H:%M:%S") + " New Log----------\n")
+            logfile.writelines("\n\n----------" + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " New Log----------\n")
             print_slow.slow_type(Fore.BLUE + "\n\nLogFile" + Fore.GREEN + " [OK]")
     except PermissionError:
         print(Fore.RED + "[Error 12]")
