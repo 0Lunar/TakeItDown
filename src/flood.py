@@ -62,6 +62,9 @@ def flood(ip, port):
         sys.exit()
     except KeyboardInterrupt:
         print(Fore.BLUE , "\n[WARNING] Keyboard Interrupt rilevated, exiting...")
+        logs.log(0, "Keyboard Interrupt detected")
+    except ValueError:
+        logs.log(1, "ValueError")
     except:
         print(Fore.RED , "\n[Error 404]" , Fore.RESET)
         sys.exit()
