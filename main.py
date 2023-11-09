@@ -25,9 +25,9 @@ def main():
         if choise == 1 or choise == 2:
             clean()
             banner.banner()
-            print_slow.slow_type("\n  Enter one of these ifcaes\n\n")
+            print_slow.slow_type(Fore.CYAN + "\n  Enter one of these ifcaes\n\n")
             show_ifaces()
-            iface = input("\n ==> ")
+            iface = input(Fore.GREEN + "\n ==> " + Fore.YELLOW)
             l = "iface: ", iface
             logs.log(0, l)
             if choise == 1: #monitor mode
