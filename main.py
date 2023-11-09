@@ -47,31 +47,34 @@ def main():
             clean()
             banner.banner()
             logs.log(0, "deauth menu started")
-            print_slow.slow_type("\n  Enter one of these ifaces\n\n")
+            print_slow.slow_type(Fore.CYAN + "\n  Enter one of these ifaces\n\n")
             show_ifaces()
-            iface = input("\n ==> ")
+            iface = input(Fore.GREEN + "\n ==> " +Fore.YELLOW)
             l = "deauth iface: " + iface
             logs.log(0, l)
             deauth.scan(iface)
-            bssid = input("\nEnter the bssid: ")
+            bssid = input(Fore.GREEN + "\nEnter the bssid: " + Fore.YELLOW)
             l = "BSSID: " + bssid
             logs.log(0, l)
             if choise == 4:
                 deauth.deauth(iface, bssid)
             else:
                 deauth.advancedScan(iface, bssid)
-                mac = input("\nEnter the mac: ")
+                mac = input(Fore.GREEN + "\nEnter the mac: " + Fore.YELLOW)
                 l = "MAC: " + mac
                 logs.log(0, l)
                 deauth.deauthdv(iface, bssid, mac)
         elif choise == 6: #spam ap
             clean()
             banner.banner()
-            print_slow.slow_type("\n  Enter one of these ifaces\n\n")
+            print_slow.slow_type(Fore.CYAN + "\n  Enter one of these ifaces\n\n")
             show_ifaces()
-            iface = input("\n ==> ")
+            iface = input(Fore.GREEN + "\n ==> " + Fore.YELLOW)
             l = "iface: " + iface
             logs.log(0, l)
+            clean()
+            banner.banner()
+            print(Fore.CYAN + "\n\n---------------AP SPAM---------------" + Fore.GREEN)
             ap.ap(iface)
         elif choise == 7:
             print_slow.slow_type(Fore.GREEN + "\n\nEnter the ip: ")
