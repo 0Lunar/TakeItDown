@@ -1,7 +1,7 @@
 import os, sys
 from colorama import Fore, init
 from time import sleep
-from src import print_slow, logs
+from source import print_slow, logs
 
 def check_requirements():
     try:

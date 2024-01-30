@@ -1,6 +1,6 @@
 import os, sys
 from colorama import Fore
-from src import logs
+from source import logs
 
 def monitor(iface):
     logs.log(0, "killing processes that can compromise mode switching")

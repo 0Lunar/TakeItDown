@@ -1,6 +1,6 @@
 import os, sys
 from colorama import Fore
-from src import print_slow, banner, logs
+from source import print_slow, banner, logs
 
 def clean():
     os.system("clear")

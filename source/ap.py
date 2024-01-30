@@ -1,6 +1,6 @@
 import os, sys
 from colorama import Fore
-from src import print_slow, logs
+from source import print_slow, logs
 
 def ap(iface):
     try:

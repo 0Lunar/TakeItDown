@@ -1,6 +1,6 @@
 from colorama import Fore
 import os
-from src import print_slow, logs
+from source import print_slow, logs
 
 def arpScan(iface, option):
     optionError = 0

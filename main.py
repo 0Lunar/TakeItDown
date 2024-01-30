@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
 import os, sys
-from colorama import Fore, init
-from src import check, banner, mode, print_slow, deauth, ap, flood, logs, arpScan
+from colorama import Fore
+from source import check, banner, mode, print_slow, deauth, ap, flood, logs, arpScan
 
 def clean():
     os.system("clear")
 
 def show_ifaces():
     if os.system("ifconfig -a | sed 's/[ \\t].*//;/^$/d' | tr -d \":\" 1>/dev/null 2>/dev/null") != 0:
-        printf("\n[Error 4]")
+        print("\n[Error 4]")
         sys.exit()
     else:
         os.system("ifconfig -a | sed 's/[ \\t].*//;/^$/d' | tr -d \":\"")

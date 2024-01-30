@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from src import print_slow
+from source import print_slow
 from colorama import Fore
 
 def logFile():

@@ -1,5 +1,5 @@
 import os, sys, socket, random, time
-from src import print_slow, banner, logs
+from source import print_slow, banner, logs
 from colorama import Fore
 
 def clean():

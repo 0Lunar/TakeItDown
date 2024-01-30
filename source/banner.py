@@ -1,5 +1,5 @@
 from colorama import Fore
-from src import print_slow, logs
+from source import print_slow, logs
 
 def banner():
     print(Fore.GREEN + "▄▄▄▄▄ ▄▄▄· ▄ •▄ ▄▄▄ .▪  ▄▄▄▄▄·▄▄▄▄        ▄▄▌ ▐ ▄▌ ▐ ▄ \n•██  ▐█ ▀█ █▌▄▌▪▀▄.▀·██ •██  ██▪ ██ ▪     ██· █▌▐█•█▌▐█\n ▐█.▪▄█▀▀█ ▐▀▀▄·▐▀▀▪▄▐█· ▐█.▪▐█· ▐█▌ ▄█▀▄ ██▪▐█▐▐▌▐█▐▐▌\n ▐█▌·▐█ ▪▐▌▐█.█▌▐█▄▄▌▐█▌ ▐█▌·██. ██ ▐█▌.▐▌▐█▌██▐█▌██▐█▌\n ▀▀▀  ▀  ▀ ·▀  ▀ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀▀•  ▀█▄▀▪ ▀▀▀▀ ▀▪▀▀ █▪" + Fore.RESET)
